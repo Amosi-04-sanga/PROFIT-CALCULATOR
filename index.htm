@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profit calculator</title>
+    <link rel="stylesheet" href="manifest.css">
+</head>
+<body>
+    
+    <!-- wrapper -->
+    <div class="calc">
+
+        <ul class="calc__links">
+           <li class="calc__item"><a href="#" class="calc__link active">HOME</a></li>
+           <li class="calc__item"><a href="#" class="calc__link">DETAILS</a></li>
+           <li class="calc__item"><a href="#" class="calc__link">CALCULATE</a></li>
+        </ul>
+
+        <hr class="calc__underline calc__underline-thick">
+
+        <h3 class="calc__header">collect all expenditures and calculate net profit for your project</h3>
+        
+        <form class="calc__form-flex">
+            <input type="text" class="calc__input calc__input-heading" placeholder="Enter project name">
+            <button class="calc__btn-done" type="submit">done</button>
+        </form>
+       <!-- form -->
+        <form class="calc__form">
+            
+            <div class="calc__wrapper">
+                <label for="expenditure">Kind of expenditure</label>
+                <input type="text" placeholder="Example: pay wages for seedling" id="expenditure" class="calc__input">
+            </div>
+
+            <div class="calc__wrapper">
+                <label for="amount">Amount</label>
+                <input type="text" placeholder="Example 200000/=" id="amount" class="calc__input">
+            </div>
+
+            <button id="submit" class="calc__submit" type="submit">save</button>
+
+            <p class="calc__message"></p>
+        </form>
+        <!-- form END -->
+
+        <hr class="calc__underline calc__underline-thin">
+        
+        <!-- records -->
+       <div class="calc__records">
+           
+       </div> 
+       <!-- records END -->
+       
+       <hr class="calc__underline calc__underline-thin">
+       
+       <form class="calc__profit">
+           <div class="calc__wrapper">
+              <label for="total-gain">Enter total gain in TSH</label>
+              <div class="calc__form-flex">
+                <input type="text" class="calc__input calc__input-heading" id="total-gain">
+                <button class="calc__btn-done" id="total-btn" type="submit">done</button>
+            </div>
+
+           </div>
+
+           <div class="calc__wrapper">
+              <label for="total-expenditure">Total expenditure from beggining</label>
+              <input class="calc__input" type="text" id="total-expenditure" disabled>
+           </div>
+
+           <div class="calc__wrapper">
+              <label for="net-profit">NET PROFIT/LOSS:</label>
+              <input type="text" class="calc__input" id="net-profit-loss" disabled>
+           </div>
+
+        </form>
+
+    </div>
+    <!-- wrapper END-->
+    
+<script src="main.js"></script>
+</body>
+</html>

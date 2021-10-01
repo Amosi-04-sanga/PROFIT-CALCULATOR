@@ -1,0 +1,160 @@
+
+.calc {
+    width: 350px;
+    margin: 50px auto;
+    box-shadow: 0 0 2px 0 grey;
+    padding: 1rem;
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0 .8rem 0;
+    }
+    &__item {
+        list-style-type: none;
+
+    }
+
+    &__link {
+        text-decoration: none;
+        color: black;
+        border: 1px solid $border-color;
+        padding: .1rem;
+        border-radius: 5px;
+    }
+    &__link.active {
+        font-weight: 900;
+    }
+
+    &__link:hover {
+        transition: border .3s ease-in-out;
+        border: 1px solid black;
+    }
+
+    &__underline {
+        border: none;
+        margin: auto;
+        background-color: rgb(156, 126, 126);
+        width: 40%;
+        border-radius: 10px;
+    }
+    
+    &__underline-thick {
+        height: .3rem;
+    }
+
+    &__underline-thin {
+        height: .2rem;
+        width: 70%;
+        margin: 2rem auto;
+    }
+
+    // heading
+    &__header {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 3rem 0;
+    }
+
+    &__form-flex {
+        display: flex;
+        margin: 0 0 3rem 0;
+        //align-items: center;
+    }
+
+    &__input {
+        border: 1px solid $border-color;
+        display: block;
+    }
+    &__btn-done,
+    &__input {
+        padding: .2rem .4rem;
+    }
+
+    &__input,
+    &__message {
+        width: 90%;
+        border-radius: .3rem;
+    }
+
+    &__input:hover,
+    &__input:focus {
+        transition: border .3s ease-in-out;
+        border: 1px solid rgba(4, 5, 41, 0.8);
+    }
+
+    &__btn-done {
+        text-transform: capitalize;
+        background-color: rgb(157, 223, 186);
+    }
+    &__btn-done:hover {
+        transition: background-color .3s ease-in-out;
+        background-color: rgb(97, 194, 140);
+    }
+
+    &__input-heading {
+        border-radius: .3rem 0 0 .3rem;
+    }
+
+    &__form {
+        margin: 2rem auto;
+    }
+
+    &__wrapper {
+        margin: 1rem auto;
+    }
+
+    &__submit {
+        display: block;
+        background-color: rgb(97, 194, 140);
+        padding: .3rem .6rem;
+        text-transform: uppercase;
+        margin: 2rem auto;
+        border-radius: .3rem;
+    }
+
+    &__submit:hover {
+        transition: border .3s ease-in-out;
+        box-shadow: 0 0 .2rem rgb(177, 131, 131);
+    }
+
+    &__message {
+        height: 1.2rem;
+        line-height: normal;
+        padding: 0 0 0 .4rem;
+    }
+
+    &__message::first-letter {
+        text-transform: uppercase;
+    }
+
+    &__message.success {
+        background-color: rgb(153, 209, 153);
+    }
+    &__message.danger {
+        background-color: rgb(230, 165, 181);
+    }
+
+    // expenditure details
+    &__records {
+        counter-reset: details;
+    }
+    &__text {
+        margin: 1rem 0;
+    }
+    &__text::before {
+        counter-increment: details;
+        content: "detail " counter(details) ". ";
+    }
+    &__text::first-letter {
+        text-transform: capitalize;
+    }
+    
+}
+
+
+
+
+
+
+
